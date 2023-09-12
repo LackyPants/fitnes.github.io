@@ -1,0 +1,138 @@
+.container {
+            padding: 50px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col-md-4 {
+            flex: 0 0 calc(33.3333% - 30px);
+            max-width: calc(33.3333% - 30px);
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .col-md-4::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: -1;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.15));
+            background-size: 200% 200%;
+            filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .col-md-4:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .col-md-4:hover::before {
+            opacity: 1;
+        }
+body{
+            background-color: #1F1D1B ;
+            color: #E0E2E4 ;
+        }
+        .carousel-item3 {
+            display: flex;
+            align-items: center;
+        }
+
+        .carousel-item3 img {
+            width: 500px;
+            margin: 25px;
+            border-radius: 25px;
+        }
+
+        .carousel-item3 .text-container {
+            flex: 1;
+            margin: 100px;
+            width: 50px;
+            height: 120px;
+        }
+
+        /* Стилі для сторінки магазину */
+        .container {
+            margin-top: 50px;
+        }
+a:link,
+a:visited {
+  color: #E0E2E4; /* змінюємо колір посилань */
+  text-decoration: none; /* видалення підкреслення */
+}
+
+.jumbotron {
+  background-image: linear-gradient(to right, #ff0000, #0000ff);
+    color:#1F1D1B ;
+}
+   .btn-monochrome {
+      color: white;
+      background-color: black;
+      border-color: black;
+      border-radius: 25px;
+    }
+
+    .btn-monochrome:hover {
+      color: black;
+      background-color: white;
+      border-color: black;
+    }
+
+
+
+            /* Your existing styles */
+
+        /* Additional styling for login menu */
+        .login-form-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            color: #000;
+            border-radius: 20px;
+        }
+
+        .login-form-container h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-form-container input[type="text"],
+        .login-form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius:25px;
+        }
+
+        .login-form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #1F1D1B;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .login-form-container input[type="submit"]:hover {
+            background-color: #5C5C5C;
+        }
+

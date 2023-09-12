@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fitness Solution</title>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Login Menu -->
+	<div class="login-form-container">
+		<h3>Вхід</h3>
+		<form>
+			<label for="username">Ім'я користувача:</label>
+			<input type="text" id="username" name="username" required><br><br>
+			<label for="password">Пароль:</label>
+			<input type="password" id="password" name="password" required><br><br>
+			<input type="submit" value="Увійти"> 
+		</form>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			$(".btn-monochrome").click(function() {
+				$(".login-form-container").fadeIn();
+			});
+
+			$(".login-form-container").click(function(event) {
+				if (!$(event.target).closest("form").length) {
+					$(this).fadeOut();
+				}
+			});
+		});
+	</script>
+	<!-- Головне меню -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: sticky; top: 0;">
+    <a class="navbar-brand" href="#">Fitness Solution</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="far fa-user" style="color: #253c65;"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#text">Про нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ourprog">Наші програми</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Контакти</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Плани ти Ціни</a>
+        </li>
+      </ul>
+    </div>
+   <button class="btn btn-outline-primary btn-monochrome" type="button">
+  <i class="far fa-user"></i> Увійти
+</button>
+  </nav>
+
+	<!-- Зображення, заголовок та опис -->
+	<div class="jumbotron ">
+		<div class="container">
+			<h1 class="display-4">Fitness Solution</h1>
+			<p class="lead">Трансформуй своє тіло, розвивай свій розум: Розкрий свій фітнес-потенціал!</p>
+		</div>
+	</div>
+	
+	<!-- Карусель зображень та тексту -->
+	<div class="carousel-container">
+		<a id="text"><div class="carousel-item3"></a>
+			<img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1">
+			<div class="text-container">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+
+		<div class="carousel-item3">
+			<img src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2">
+			<div class="text-container">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+
+		<div class="carousel-item3">
+			<img src="https://images.pexels.com/photos/2204196/pexels-photo-2204196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3">
+			<div class="text-container">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+	</div>
+
+<!-- Список функцій та вигод -->
+	<div class="container">
+		<div class="row">
+			<a id="ourprog"><div class="col-md-4"></a>
+				<a href="#" ><h3>Наші програми</h3>
+				<p>Ми пропонуємо різні програми тренувань, які підходять для різного рівня підготовки та цілей</p></a>
+			</div>
+			<div class="col-md-4">
+				<a href="#"><h3>Онлайн тренування</h3>
+				<p>Ви можете займатися звідки завгодно</p></a>
+		</div>
+		<div class="col-md-4">
+			<a href="#"><h3>Особисті тренування</h3>
+			<p>Для тих, хто шукає індивідуальний підхід, ми пропонуємо особисті тренування з професійними тренерами</p></a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<a href="#"><h3>Спільнота</h3>
+			<p>Приєднуйтесь до нашої спільноти, де можна ділитися досвідом та мотивувати один одного до досягнення цілей</p></a>
+		</div>
+		<div class="col-md-4">
+			<a href="#"><h3>Гнучкість та доступність</h3>
+			<p>Наші програми підходять для різних рівнів підготовки та доступні в будь-який зручний для вас час</p></a>
+		</div>
+		<div class="col-md-4">
+			<a href="#"><h3>Результати</h3>
+			<p>Наші клієнти отримують видимі результати та покращують своє фізичне самопочуття</p></a>
+		</div>
+	</div>
+</div>
+
+	<!-- Підвал сторінки -->
+	<footer class="page-footer font-small blue pt-4" style="background: #bd2130; margin-top: 25px;">
+		<div class="container-fluid text-center text-md-left">
+			<div class="row">
+				<div class="col-md-6">
+					<h5 class="text-uppercase">Про нас</h5>
+					<p>Ми пропонуємо програми тренувань та онлайн тренування для всіх, хто хоче займатися фітнесом вдома</p>
+				</div>
+				<div class="col-md-6">
+					<a id="contact"><h5 class="text-uppercase">Контакти</h5></a>
+					<p>Телефон: 050-123-45-67</p>
+					<p>Email: fitnesssolution@gmail.com</p>
+					<p>Адреса: м. Київ, вул. Хрещатик, 1</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+</body>
+</html>
+
